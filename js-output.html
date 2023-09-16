@@ -18,13 +18,21 @@
             var minute = date.getMinutes();
             var sec = date.getSeconds();
 
-            var clock = hour + ":" + minute + ":" + sec;
+            var am = "AM";
+            var pm = "PM";
+
+            if (hour >= 12) {
+                var clock = hour + ":" + minute + ":" + sec + " " + pm;
+
+            } else {
+                var clock = hour + ":" + minute + ":" + sec + " " + am;
+            }
             document.getElementById("MyClockDisplay").textContent = clock;
 
             setTimeout(clockRunner, 1000);
         }
 
-        clockRunner);
+        clockRunner();
     </script>
 </body>
 </html>
