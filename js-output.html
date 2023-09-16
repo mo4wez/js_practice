@@ -18,15 +18,18 @@
             var minute = date.getMinutes();
             var sec = date.getSeconds();
 
-            var am = "AM";
-            var pm = "PM";
+            var a = "AM";
 
-            if (hour >= 12) {
-                var clock = hour + ":" + minute + ":" + sec + " " + pm;
-
-            } else {
-                var clock = hour + ":" + minute + ":" + sec + " " + am;
+            if (hour > 12) {
+                hour = hour - 12;
+                a = "PM";
             }
+
+            if (hour < 10) {
+                hour = "0" + hour;
+            }
+
+            var clock = hour + ":" + minute + ":" + sec + " " + a;
             document.getElementById("MyClockDisplay").textContent = clock;
 
             setTimeout(clockRunner, 1000);
