@@ -12,6 +12,17 @@
     </div>
 
     <script>
+        function clockRunner() {
+            var date = new Date();
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var sec = date.getSeconds();
+
+            var clock = hour + ":" + minute + ":" + sec;
+            document.getElementById("MyClockDisplay").textContent = clock;
+        }
+
+        clockRunner();
     </script>
 </body>
 </html>
