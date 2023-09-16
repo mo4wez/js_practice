@@ -20,9 +20,11 @@
 
             var clock = hour + ":" + minute + ":" + sec;
             document.getElementById("MyClockDisplay").textContent = clock;
+
+            setTimeout(clockRunner, 1000);
         }
 
-        clockRunner();
+        clockRunner);
     </script>
 </body>
 </html>
