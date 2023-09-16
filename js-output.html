@@ -28,6 +28,12 @@
             if (hour < 10) {
                 hour = "0" + hour;
             }
+            if (minute < 10) {
+                minute = "0" + minute;
+            }
+            if (sec < 10) {
+                sec = "0" + sec;
+            }
 
             var clock = hour + ":" + minute + ":" + sec + " " + a;
             document.getElementById("MyClockDisplay").textContent = clock;
