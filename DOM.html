@@ -12,6 +12,7 @@
             <li>list 2</li>
             <li>list 3</li>
         </ul>
+        <!-- <div>Test</div> -->
     </div>
 
     <table id="table1">
@@ -22,9 +23,17 @@
     </table>
 
     <button type="button">click me</button>
-    
-    <script>
 
+    <script>
+        'use strict';
+
+        let body = document.body;
+        let myDiv = body.childNodes[1];
+        let myDivChildsCount = myDiv.childNodes.length;
+
+        for (let i = 0; i < myDivChildsCount; i++) {
+            console.log(myDiv.childNodes[i]);
+        }
     </script>
 </body>
 </html>
