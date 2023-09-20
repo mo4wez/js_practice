@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+<body style="text-align: center;">
+
+    <script>
+        let student = {
+            name: 'moawezz',
+            skills: ['Django', 'React', 'Js'], 
+            doCode: function() {
+                // console.log('Coding...');
+                // let myThis = this;
+                this.skills.forEach(function(elem) {
+                    console.log(this);
+                }.bind(this));
+            }
+        };
+
+        student.doCode();
+    </script>
+</body>
+</html>
