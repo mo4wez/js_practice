@@ -23,8 +23,9 @@
 
         console.log(this); // window
 
+        let localThis = this;
         function checkThis() {
-            console.log(this);
+            console.log(localThis);
         };
 
         checkThis(); // undefined
