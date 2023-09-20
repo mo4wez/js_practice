@@ -8,19 +8,27 @@
 <body style="text-align: center;">
 
     <script>
+        'use strict';
         let student = {
             name: 'moawezz',
             skills: ['Django', 'React', 'Js'], 
             doCode: function() {
-                // console.log('Coding...');
+                // console.log('Coding...'); // its father
                 // let myThis = this;
                 this.skills.forEach(function(elem) {
-                    console.log(this);
+                    // console.log(this);
                 }.bind(this));
             }
         };
 
-        student.doCode();
+        console.log(this); // window
+
+        function checkThis() {
+            console.log(this);
+        };
+
+        checkThis(); // undefined
+        // student.doCode();
     </script>
 </body>
 </html>

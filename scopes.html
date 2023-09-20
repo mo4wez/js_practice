@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scopes</title>
+</head>
+<body style="text-align: center;">
+    <h1>Scopes</h1>
+    <button type="button" onclick="test()">click me</button>
+
+    <script>
+        var x = 'x';
+
+        function test() {
+            var y = 'y';
+
+            console.log(x);
+        }
+        console.log(y);
+    </script>
+
+</body>
+</html>
