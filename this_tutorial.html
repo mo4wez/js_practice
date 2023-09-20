@@ -6,6 +6,7 @@
     <title>this</title>
 </head>
 <body style="text-align: center;">
+    <button id="btn1" type="button">click me</button>
 
     <script>
         'use strict';
@@ -25,11 +26,11 @@
 
         let localThis = this;
         function checkThis() {
-            console.log(localThis);
+            console.log(this); // in var this will points window object
         };
 
-        checkThis(); // undefined
-        // student.doCode();
+        let clickMe = document.getElementById('btn1');
+        clickMe.onclick = checkThis;
     </script>
 </body>
 </html>
