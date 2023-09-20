@@ -16,8 +16,20 @@
     </div>
 
     <table id="table1">
-        <th>Table one</th>
+        <thead>
+            <tr>
+                <th>col 1</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    data one
+                </td>
+            </tr>
+        </tbody>
     </table>
+
     <table id="table2">
         <th>Table two</th>
     </table>
@@ -27,21 +39,8 @@
     <script>
         'use strict';
 
-        let body = document.body;
-        let myDiv = body.childNodes[1];
-        let ul = myDiv.childNodes[1];
-
-        console.log(ul.previousSibling);
-        // childNodes
-        let myDivChildsCount = myDiv.childNodes.length;
-        for (let i = 0; i < myDivChildsCount; i++) {
-            console.log(myDiv.childNodes[i]);
-        }
-
-        // parentNode
-
-        let myDivParent = myDiv.parentNode;
-        console.log(myDivParent);
+        let tableRows = table1.rows;
+        console.log(tableRows);
     </script>
 </body>
 </html>
