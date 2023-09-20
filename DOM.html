@@ -29,11 +29,19 @@
 
         let body = document.body;
         let myDiv = body.childNodes[1];
-        let myDivChildsCount = myDiv.childNodes.length;
+        let ul = myDiv.childNodes[1];
 
+        console.log(ul.previousSibling);
+        // childNodes
+        let myDivChildsCount = myDiv.childNodes.length;
         for (let i = 0; i < myDivChildsCount; i++) {
             console.log(myDiv.childNodes[i]);
         }
+
+        // parentNode
+
+        let myDivParent = myDiv.parentNode;
+        console.log(myDivParent);
     </script>
 </body>
 </html>
